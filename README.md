@@ -8,7 +8,7 @@
 - SearchByName
 - SearchByEmail
 - SearchByNumber
-- Display
+- DisplayContacts
 - ClearContact
 
 ## Arrays:
