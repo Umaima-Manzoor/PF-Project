@@ -1,6 +1,6 @@
 # PF-Project
 
-##All functions
+## All functions
 - Main
 - AddContact
 - DeleteContact
@@ -10,3 +10,18 @@
 - SearchByNumber
 - Display
 - ClearContact
+
+## Arrays:
+- Name
+- Email
+- Number
+
+## Divisions of Functions
+
+### Maryam Saleem:
+
+
+### Aiman Misbah:
+
+
+### Umaima Manzoor:
