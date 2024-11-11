@@ -43,7 +43,7 @@ void SearchByName(char name[1000][100], char email[1000][100], char number[1000]
         }
     }
 
-    if (!flag) 
+    if(!flag) 
 	{
         puts("Contact Not Found");
     }
@@ -57,7 +57,7 @@ void DisplayContacts(char name[1000][100], char email[1000][100], char number[10
         return;
     }
     int i;
-    for (i=0;i<count; i++) 
+    for(i=0;i<count;i++) 
 	{
         printf("Contact %d:\n", i + 1);
         printf("Name: ");
