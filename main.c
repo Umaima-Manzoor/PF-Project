@@ -6,9 +6,9 @@ int main(){
 int name[1000][100] ,email[1000][100],number[1000][100];
 
 for(int i=0;i<1000;i++){
-	name[1000][100]=0;
-	email[1000][100]=0;
-	number[1000][100]=0;
+	name[1000][100]=" ";
+	email[1000][100]=" ";
+	number[1000][100]=" ";
 }
 
 int choice;
