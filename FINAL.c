@@ -1,3 +1,4 @@
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -34,6 +35,7 @@ void SearchByNumber(char name[1000][100],char email[1000][100],char number[1000]
 	 }
 	 
 	 if (flag){
+	 	printf("Contact Information:\n");
 	 	printf("Name: %s\nEmail: %s\nPhone Number: %s\n",name[index],email[index],number[index]);
 	 	
 	 }
@@ -155,13 +157,15 @@ void DeleteContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
         scanf(" %c", &choice);
 
         if (choice != 'N' && choice != 'P' && choice != 'E') {
-            printf("Invalid choice, please try again\n\n");
+            printf("\nInvalid choice, please try again\n\n");
+            sleep(2);
+			system("cls");
         }
     } while (choice != 'N' && choice != 'P' && choice != 'E');
 
     switch (choice) {
         case 'N': 
-            printf("Enter the name of the contact you would like to delete: ");
+            printf("\nEnter the name of the contact you would like to delete: ");
             scanf(" %[^\n]", search);
             for (i = 0; i < 1000; i++) {
                 if (strcmp(search, (*name)[i]) == 0) {  
@@ -172,7 +176,7 @@ void DeleteContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
             break;
 
         case 'P': 
-            printf("Enter the phone number of the contact you would like to delete: ");
+            printf("\nEnter the phone number of the contact you would like to delete: ");
             scanf(" %[^\n]", search);
             for (i = 0; i < 1000; i++) {
                 if (strcmp(search, (*num)[i]) == 0) {  
@@ -183,7 +187,7 @@ void DeleteContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
             break;
 
         case 'E': 
-            printf("Enter the email address of the contact you would like to delete: ");
+            printf("\nEnter the email address of the contact you would like to delete: ");
             scanf(" %[^\n]", search);
             for (i = 0; i < 1000; i++) {
                 if (strcmp(search, (*email)[i]) == 0) { 
@@ -195,7 +199,7 @@ void DeleteContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
     }
 
     if (position == -1) {
-        printf("Sorry, but no such contact exists in the database\n");
+        printf("\nSorry, but no such contact exists in the database\n");
     }
     else {
         
@@ -324,12 +328,12 @@ int choice;
 
 do{
 
-printf(" 1 . Add contact\n");
-printf(" 2 . DeleteContact\n");
-printf(" 3 . UpdateContact\n");
+printf(" 1 . Add Contact\n");
+printf(" 2 . Delete Contact\n");
+printf(" 3 . Update Contact\n");
 printf(" 4 . Search Contact\n"); 
 printf(" 5 . Clear Contacts\n");
-printf(" 6 . Display Contacts:\n");
+printf(" 6 . Display Contacts\n");
 printf(" 7 . Exit\n");
 
 printf("Enter option ( 1 | 2 | 3 | 4 | 5 | 6 | 7 ): ");
@@ -364,7 +368,7 @@ switch(choice){
         
         do {
         printf("Would you like to search by name (N), email (E), or phone number (P): ");
-        scanf("%c", &S);
+        scanf(" %c", &S);
         switch (S) {
             case 'N': SearchByName(name, email, number);
             break;
@@ -390,7 +394,7 @@ switch(choice){
 
 }
 
-sleep(3);
+sleep(4);
 system("cls");
 
 } while (choice!=7);
@@ -398,3 +402,4 @@ system("cls");
 return 0;
 
 }
+
