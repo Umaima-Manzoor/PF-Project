@@ -1,20 +1,44 @@
-int count=0;
-
-void AddContact(char name[1000][100], char email[1000][100], char number[1000][100])
+void AddContact(char (*name)[1000][100], char (*email)[1000][100], char (*number)[1000][100])
 {
+    int i, flag = 0;
+    char n[100], e[100], num[100];
+
     printf("Enter Name: ");
-    fgets(name[count], 100, stdin);
-    name[count][strcspn(name[count], "\n")] = '\0';
+    scanf(" %[^\n]", n);
 
     printf("Enter Email: ");
-    fgets(email[count], 100, stdin);
-    email[count][strcspn(email[count], "\n")] = '\0';
+    scanf(" %[^\n]", e);
 
     printf("Enter Phone Number: ");
-    fgets(number[count], 100, stdin);
-    number[count][strcspn(number[count], "\n")] = '\0';
+    scanf(" %[^\n]", num);
 
-    count++;
-    puts("Contact Was Added Successfully!");
+    for (i = 0; i < 1000; i++)
+    {
+        if (strcmp((*name)[i], n) == 0 && strcmp((*email)[i], e) == 0 && strcmp((*number)[i], num) == 0)
+        {
+            flag = -1;
+            puts("\nContact is already stored in the database");
+            break;
+        }
+    }
+    if (flag != -1)
+    {
+        for (i = 0; i < 1000; i++)
+        {
+            if (strcmp((*name)[i], " ") == 0)
+            {
+                strcpy((*name)[i], n);
+                strcpy((*email)[i], e);
+                strcpy((*number)[i], num);
+                puts("\nContact Was Added Successfully!");
+                flag = 1;
+                break;
+            }
+        }
+    }
+
+    if (flag == 0)
+    {
+        puts("Sorry, the contact list is full");
+    }
 }
-
