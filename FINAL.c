@@ -136,7 +136,7 @@ int SearchByNumber(char name[1000][100], char email[1000][100], char number[1000
 
     do
     {
-        printf("Enter Phone Number: ");
+        printf("Enter the phone number of the contact you want to search: ");
         scanf(" %[^\n]", num);
         while((temp = getchar()) != '\n' && temp != EOF);
 
@@ -420,63 +420,18 @@ void UpdateContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
     switch (choice)
     {
     case 'N':
-        do
-        {
-            printf("\nEnter the name of the contact you would like to update: ");
-            scanf(" %[^\n]", search);
-            while((temp = getchar()) != '\n' && temp != EOF);
-
-            validName = 1;
-            for (i = 0; search[i] != '\0'; i++)
-            {
-                if (!((search[i] >= 'a' && search[i] <= 'z') || (search[i] >= 'A' && search[i] <= 'Z') || search[i] == ' '))
-                {
-                    validName = 0;
-                    break;
-                }
-            }
-
-            if (!validName)   
-            {
-                printf("Error: Invalid name! Only alphabets (both upper and lower cases) are allowed.\n\n");
-            }
-
-        } while (!validName);
+        
 
         count = SearchByName(*name, *email, *num, position);
         break;
 
     case 'P':
-        do
-        {
-            printf("\nEnter the phone number of the contact you would like to update: ");
-            scanf(" %[^\n]", search);
-            while((temp = getchar()) != '\n' && temp != EOF);
-
-            validPhone = 1;
-            for (i = 0; search[i] != '\0'; i++)
-            {
-                if (!((search[i] >= '0' && search[i] <= '9') || search[i] == '+' || search[i] == '-'))
-                {
-                    validPhone = 0;
-                    break;
-                }
-            }
-
-            if (!validPhone)
-            {
-                printf("Error: Invalid phone number! Only digits, '+' and '-' are allowed.\n\n");
-            }
-
-        } while (!validPhone);
-
+       
         count = SearchByNumber(*name, *email, *num, position);
         break;
 
     case 'E':
-        printf("\nEnter the email address of the contact you would like to update: ");
-        scanf(" %[^\n]", search);
-        while((temp = getchar()) != '\n' && temp != EOF);
+       
 
         count = SearchByEmail(*name, *email, *num, position);
         break;
@@ -531,28 +486,73 @@ void UpdateContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
             else if (choose < 1 || choose > 3)
             {
                 printf("\nInvalid choice, please try again\n\n");
-                sleep(2);
-                system("cls");
+                
             }
+            sleep(2);
+            system("cls");
         } while (choose < 1 || choose > 3);
 
         switch (choose)
         {
         case 1:
-            printf("\nEnter the new name you would like to update this to: ");
-            scanf(" %[^\n]", (*name)[pos]);
+            do
+            {
+                printf("\nEnter the new name you would like to update this to: ");
+                scanf(" %[^\n]", (*name)[pos]);
+                while((temp = getchar()) != '\n' && temp != EOF);
+
+                validName = 1;
+                for (i = 0; (*name)[pos][i] != '\0'; i++)
+                {
+                    if (!(((*name)[pos][i] >= 'a' && (*name)[pos][i] <= 'z') || 
+                          ((*name)[pos][i] >= 'A' && (*name)[pos][i] <= 'Z') || 
+                          (*name)[pos][i] == ' '))
+                    {
+                        validName = 0;
+                        break;
+                    }
+                }
+
+                if (!validName)   
+                {
+                    printf("Error: Invalid name! Only alphabets (both upper and lower cases) are allowed.\n\n");
+                }
+
+            } while (!validName);
             printf("\nContact updated successfully\n");
             break;
 
         case 2:
-            printf("\nEnter the new phone number you would like to update this to: ");
-            scanf(" %[^\n]", (*num)[pos]);
+            do
+            {
+                printf("\nEnter the new phone number you would like to update this to: ");
+                scanf(" %[^\n]", (*num)[pos]);
+                while((temp = getchar()) != '\n' && temp != EOF);
+
+                validPhone = 1;
+                for (i = 0; (*num)[pos][i] != '\0'; i++)
+                {
+                    if (!(((*num)[pos][i] >= '0' && (*num)[pos][i] <= '9') || 
+                          (*num)[pos][i] == '+' || (*num)[pos][i] == '-'))
+                    {
+                        validPhone = 0;
+                        break;
+                    }
+                }
+
+                if (!validPhone)
+                {
+                    printf("Error: Invalid phone number! Only digits, '+' and '-' are allowed.\n\n");
+                }
+
+            } while (!validPhone);
             printf("\nContact updated successfully\n");
             break;
 
         case 3:
             printf("\nEnter the new email address you would like to update this to: ");
             scanf(" %[^\n]", (*email)[pos]);
+            while((temp = getchar()) != '\n' && temp != EOF);
             printf("\nContact updated successfully\n");
             break;
         }
