@@ -107,7 +107,7 @@ void UpdateContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
             {
                 printf("\nEnter the new name you would like to update this to: ");
                 scanf(" %[^\n]", (*name)[pos]);
-                while((temp = getchar()) != '\n' && temp != EOF);
+                // while((temp = getchar()) != '\n' && temp != EOF);
 
                 validName = 1;
                 for (i = 0; (*name)[pos][i] != '\0'; i++)
@@ -135,7 +135,7 @@ void UpdateContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
             {
                 printf("\nEnter the new phone number you would like to update this to: ");
                 scanf(" %[^\n]", (*num)[pos]);
-                while((temp = getchar()) != '\n' && temp != EOF);
+                // while((temp = getchar()) != '\n' && temp != EOF);
 
                 validPhone = 1;
                 for (i = 0; (*num)[pos][i] != '\0'; i++)
@@ -160,7 +160,7 @@ void UpdateContact(char (*name)[1000][100], char (*email)[1000][100], char (*num
         case 3:
             printf("\nEnter the new email address you would like to update this to: ");
             scanf(" %[^\n]", (*email)[pos]);
-            while((temp = getchar()) != '\n' && temp != EOF);
+            // while((temp = getchar()) != '\n' && temp != EOF);
             printf("\nContact updated successfully\n");
             break;
         }
