@@ -14,7 +14,7 @@ int SearchByNumber(char name[1000][100], char email[1000][100], char number[1000
     {
         printf("Enter the phone number of the contact you want to search: ");
         scanf(" %[^\n]", num);
-        while((temp = getchar()) != '\n' && temp != EOF);
+        // while((temp = getchar()) != '\n' && temp != EOF);
 
         validPhone = 1;
         for (i = 0; num[i] != '\0'; i++)
