@@ -11,7 +11,7 @@ int SearchByEmail(char name[1000][100], char email[1000][100], char number[1000]
 
     printf("\nEnter the email you would like to search the contacts by: ");
     scanf(" %[^\n]", search);
-    while((temp = getchar()) != '\n' && temp != EOF);
+    // while((temp = getchar()) != '\n' && temp != EOF);
 
     for (i = 0; i < 1000; i++)
     {
