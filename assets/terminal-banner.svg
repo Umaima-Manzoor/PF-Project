@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 320" role="img" aria-labelledby="title desc">
+<title id="title">PF-Project terminal banner</title>
+<desc id="desc">A dark terminal-style banner for the Phonebook Management System written in C.</desc>
+<rect width="1200" height="320" rx="22" fill="#111827"/>
+<rect x="34" y="34" width="1132" height="252" rx="16" fill="#0b1220" stroke="#334155" stroke-width="2"/>
+<circle cx="70" cy="70" r="8" fill="#64748b"/>
+<circle cx="98" cy="70" r="8" fill="#64748b"/>
+<circle cx="126" cy="70" r="8" fill="#64748b"/>
+<text x="68" y="126" font-family="monospace" font-size="24" fill="#94a3b8">$ ./phonebook</text>
+<text x="68" y="174" font-family="monospace" font-size="38" font-weight="700" fill="#f8fafc">PHONEBOOK MANAGEMENT SYSTEM</text>
+<text x="68" y="214" font-family="monospace" font-size="22" fill="#94a3b8">C • CONSOLE APPLICATION • PROGRAMMING FUNDAMENTALS</text>
+<text x="68" y="254" font-family="monospace" font-size="20" fill="#cbd5e1">status: ready_</text>
+<rect x="1015" y="116" width="92" height="92" rx="18" fill="#172033" stroke="#475569" stroke-width="2"/>
+<path d="M1038 145h46v48h-46z" fill="none" stroke="#cbd5e1" stroke-width="4"/>
+<path d="M1048 156l12 12-12 12M1066 181h12" fill="none" stroke="#cbd5e1" stroke-width="4" stroke-linecap="round" stroke-linejoin="round"/>
+</svg>
