@@ -1,6 +1,6 @@
 <div align="center">
 
-<img src="assets/terminal-banner.svg" alt="PF-Project terminal banner" width="100%">
+<img src="assets/terminal-banner.svg" alt="Phonebook Management System terminal banner" width="100%">
 
 <p>
   <img src="https://img.shields.io/badge/C-A8B9CC.svg?style=flat-square&logo=C&logoColor=black" alt="C">
@@ -14,7 +14,7 @@
 
 ## `01` · Overview
 
-**PF-Project** is a console-based phonebook management system developed in **C** for a Programming Fundamentals group project.
+**Phonebook Management System** is a console-based phonebook management system developed in **C** for a Programming Fundamentals group project.
 
 It provides a menu-driven interface for creating, viewing, searching, updating, and deleting contacts during a program session.
 
@@ -123,7 +123,7 @@ The interface also uses pauses and screen clearing between menu operations to ke
 ## `06` · Project Structure
 
 ~~~text
-PF-Project/
+Phonebook Management System/
 ├── README.md
 ├── assets/
 │   └── terminal-banner.svg
@@ -191,7 +191,11 @@ For example, the application's interaction model can be represented as:
 Enter your choice: _
 ~~~
 
-> **Motion note:** GitHub READMEs do not reliably support arbitrary CSS or JavaScript animations. The repository therefore uses GitHub-compatible graphics, Mermaid diagrams, expandable sections, and terminal-style visualisation instead of unsupported page animations.
+### Terminal-style presentation
+
+The README deliberately mirrors the application's environment rather than using unrelated web-style animation. The visual system uses a terminal banner, command-line prompts, box-drawn UI, numbered commands, Mermaid system maps, and expandable source-file details.
+
+> **Design choice:** For a console application, terminal-inspired visuals communicate the project more directly than decorative motion effects.
 
 ---
 
